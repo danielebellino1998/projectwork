@@ -1,7 +1,7 @@
 # Project Work
 La repository contiene tutti i materiali necessari allo sviluppo del progetto web “Project Work”, realizzato mediante tecnologie HTML e CSS.
 
-Contenuto della repository -
+Contenuto della repository  
 La repository è organizzata come archivio strutturato delle risorse utilizzate per la costruzione del sito web e include:
 - Immagini, loghi e asset grafici utilizzati all’interno delle pagine HTML
 - File in formato Excel (.xlsx) contenenti i dataset e i report utilizzati nel progetto
