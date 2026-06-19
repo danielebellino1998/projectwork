@@ -16,7 +16,7 @@ Questi file consentono una consultazione chiara, strutturata e facilmente riutil
 
 Visualizzazione del progetto  
 Il progetto è stato pubblicato tramite GitHub Pages ed è accessibile al seguente link:
-https://danielebellino1998.github.io/projectwork/
+https://danielebellino1998.github.io/projectwork/  
 Questa versione consente di visualizzare direttamente l’interfaccia web senza la necessità di eseguire il codice in locale.
 
 Obiettivo del repository  
