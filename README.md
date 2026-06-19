@@ -7,8 +7,8 @@ La repository è organizzata come archivio strutturato delle risorse utilizzate 
 - File in formato Excel (.xlsx) contenenti i dataset e i report utilizzati nel progetto
 - File multimediali e risorse aggiuntive necessarie alla realizzazione dell’interfaccia web
 - File sorgente del sito web:
-    index.html → struttura della pagina web
-    style.css → gestione dello stile grafico e della resa visiva
+    - index.html → struttura della pagina web
+    - style.css → gestione dello stile grafico e della resa visiva
   
 Dataset e reportistica
 I dati sono organizzati in file Excel (.xlsx) relativi alle diverse aree tematiche del progetto (sostenibilità ambientale, gestionale e sociale).
