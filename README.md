@@ -1,8 +1,23 @@
-# projectwork
-Questa cartella contiene tutti gli elementi necessari per costruire il sito web del Project Work. Include:
+# Project Work
+Questo repository contiene tutti i materiali necessari allo sviluppo del progetto web “Project Work”, realizzato mediante tecnologie HTML e CSS.
 
-- Immagini e loghi da utilizzare nelle pagine HTML
-- File CSV o altri dataset integrabili nel sito
-- Qualsiasi altro materiale multimediale o risorsa richiesta per il progetto web
+Contenuto della repository
+La repository è organizzata come archivio strutturato delle risorse utilizzate per la costruzione del sito web e include:
+- Immagini, loghi e asset grafici utilizzati all’interno delle pagine HTML
+- File in formato Excel (.xlsx) contenenti i dataset e i report utilizzati nel progetto
+- File multimediali e risorse aggiuntive necessarie alla realizzazione dell’interfaccia web
+- File sorgente del sito web:
+    index.html → struttura della pagina web
+    style.css → gestione dello stile grafico e della resa visiva
+  
+Dataset e reportistica
+I dati sono organizzati in file Excel (.xlsx) relativi alle diverse aree tematiche del progetto (sostenibilità ambientale, gestionale e sociale).
+Questi file consentono una consultazione chiara, strutturata e facilmente riutilizzabile delle informazioni.
 
-Questo repository serve esclusivamente come archivio organizzato delle risorse da inserire nelle pagine HTML, per garantire una gestione chiara e ordinata di tutti i contenuti del sito.
+Visualizzazione del progetto
+Il progetto è stato pubblicato tramite GitHub Pages ed è accessibile al seguente link:
+https://danielebellino1998.github.io/projectwork/
+Questa versione consente di visualizzare direttamente l’interfaccia web senza necessità di eseguire il codice in locale.
+
+Obiettivo del repository
+La repository ha la funzione di archivio organizzato delle risorse utilizzate nello sviluppo del sito web, garantendo una gestione ordinata dei contenuti e una chiara separazione tra struttura (HTML), stile (CSS) e dati (Excel).
