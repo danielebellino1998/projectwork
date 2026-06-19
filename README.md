@@ -2,7 +2,7 @@
 La repository contiene tutti i materiali necessari allo sviluppo del sito web, il quale è stato realizzato mediante tecnologie HTML e CSS.
 
 Contenuto della repository  
-La repository è organizzata come archivio strutturato delle risorse utilizzate per la costruzione del sito web e include:
+È organizzata come archivio strutturato delle risorse utilizzate per la costruzione del sito web e include:
 - Immagini, loghi e asset grafici utilizzati all’interno delle pagine HTML
 - File in formato Excel (.xlsx) contenenti i dataset e i report utilizzati nel progetto
 - File multimediali e risorse aggiuntive necessarie alla realizzazione dell’interfaccia web
