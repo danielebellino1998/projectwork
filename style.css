@@ -1,0 +1,434 @@
+/* ===== ROOT VARIABLES ===== */
+/* Variabili globali per colori, font, radius, ombre e transizioni */
+:root { /* Root globale per le variabili CSS */
+    --primary: #006633;           /* Verde principale del brand */
+    --primary-dark: #004d25;      /* Verde scuro per titoli e footer */
+    --primary-light: #e8f5ee;     /* Verde chiaro per sfondi e celle tabella */
+    --accent: #00a86b;            /* Colore accentuato per hover e dettagli */
+    --text: #1a1a1a;              /* Colore principale del testo */
+    --text-light: #555555;        /* Colore secondario per testi meno importanti */
+    --bg: #f6f6f6;                /* Colore sfondo della pagina */
+    --white: #ffffff;             /* Bianco per testi chiari e box */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Ombra leggera per card e box */
+    --radius: 12px;               /* Angoli arrotondati per card e bottoni */
+    --transition: all 0.3s ease;  /* Transizione fluida per hover e animazioni */
+}
+
+/* ===== GLOBAL ===== */
+* { /* Selettore universale per resettare box model, margini e padding */
+    box-sizing: border-box; /* Include padding e bordo nella larghezza/altezza */
+    margin: 0;              /* Rimuove margini predefiniti */
+    padding: 0;             /* Rimuove padding predefinito */
+}
+
+body { /* Stile principale della pagina */
+    font-family: 'Inter', sans-serif; /* Font leggibile moderno */
+    background-color: var(--bg);      /* Sfondo uniforme */
+    color: var(--text);               /* Colore testo principale */
+    line-height: 1.6;                 /* Altezza riga leggibile */
+}
+
+/* ===== SECTIONS SCROLL MARGIN ===== */
+#azienda, #sostenibilita, #report { /* Sezioni target per scroll */
+    scroll-margin-top: 126px; /* Margine superiore per evitare overlay header sticky */
+}
+
+/* ===== HEADER + NAVBAR ===== */
+header { /* Selettore header principale */
+    background-color: var(--primary); /* Sfondo verde principale */
+    color: var(--white);              /* Testo bianco */
+    position: sticky;                 /* Mantiene header visibile durante scroll */
+    top: 0;                            /* Posizione top 0 */
+    z-index: 1000;                     /* Sopra altri elementi */
+    padding: 1rem 2rem;                /* Spaziatura interna */
+    display: flex;                     /* Flexbox layout */
+    justify-content: space-between;    /* Spazio tra logo e navbar */
+    align-items: center;               /* Allineamento verticale */
+}
+
+header .logo { /* Logo all'interno dell'header */
+    height: 70px; /* Altezza fissa */
+}
+
+/* ===== MEDIA QUERY RESPONSIVE ===== */
+@media screen and (max-width: 767px) {  /* Regole applicate a schermi con larghezza massima di 767px (tablet e smartphone) */
+    header .logo { /* Logo all'interno dell'header */
+        margin: 0 auto;      /* Centra il logo orizzontalmente */
+        display: block;      /* Assicura che il logo sia un blocco */
+    }
+}
+
+.navbar ul {                 /* Lista dei link della navbar */
+    display: flex;           /* Metti i link uno accanto all'altro */
+    flex-wrap: wrap;         /* Se non ci stanno, vanno a capo */
+    gap: 1rem;               /* Spazio tra un link e l'altro */
+    list-style: none;        /* Togli i pallini davanti ai link */
+    justify-content: center; /* Centra i link nella barra */
+} 
+
+.navbar a { /* Link navbar */
+    color: var(--white);      /* Colore bianco */
+    text-decoration: none;    /* Nessuna sottolineatura */
+    font-weight: 600;         /* Semi-grassetto */
+    transition: color 0.3s;   /* Transizione colore al passaggio del mouse */
+}
+
+.navbar a:hover { /* Hover sui link navbar */
+    color: var(--accent); /* Cambia colore all'hover */
+}
+
+/* ===== HERO ===== */
+.hero { /* Sezione hero */
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
+                url('https://raw.githubusercontent.com/danielebellino1998/projectwork/main/Sostenibilit%C3%A0.jpg') center/cover no-repeat;
+    color: var(--white);        /* Testo bianco */
+    padding: 10rem 4rem;        /* Spazio interno grande */
+    text-align: center;         /* Testo centrato */
+}
+
+.hero h1 { /* Titolo principale hero */
+    font-size: 2.5rem;  /* Dimensione grande */
+    margin-bottom: 1rem; /* Spazio sotto */
+}
+
+.hero p { /* Sottotitolo hero */
+    font-size: 1.2rem; /* Testo leggermente più grande */
+}
+
+/* ===== MAIN ===== */
+main { /* Contenitore principale */
+    padding: 4rem 2rem; /* Spaziatura interna */
+}
+
+/* ===== BOX LATERALE INFORMAZIONI RAPIDE ===== */
+.info-box {  /* Selettore che individua tutti i div con classe "info-box" */
+    background-color: var(--white);       /* Sfondo bianco coerente con gli altri box della pagina */
+    border-radius: var(--radius);         /* Angoli arrotondati definiti dalla variabile globale --radius */
+    box-shadow: var(--shadow);            /* Aggiunge un’ombra leggera al box, come gli altri box */
+    padding: 1.5rem;                      /* Spazio interno tra contenuto e bordo */
+    width: 250px;                         /* Larghezza fissa del box */
+    margin-left: 20px;                     /* Spazio tra il box e il contenuto a sinistra */
+    margin-bottom: 20px;                   /* Spazio inferiore tra box e altri elementi */
+    float: right;                          /* Posiziona il box sulla destra del testo principale */
+}
+
+.info-box h3 {  /* Selettore che individua il titolo h3 all'interno di .info-box */
+    color: var(--primary-dark);            /* Colore verde scuro per il titolo */
+    text-align: center;       /* Testo centrato */
+    margin-bottom: 1rem;                   /* Spazio tra titolo e lista sottostante */
+    font-size: 1.2rem;                     /* Dimensione del testo del titolo */
+}
+
+.info-box ul {  /* Selettore che individua la lista non ordinata all'interno del box */
+    list-style: none;                       /* Rimuove i pallini standard della lista */
+    padding-left: 0;                        /* Rimuove il rientro a sinistra della lista */
+}
+
+.info-box li {  /* Selettore per ogni elemento della lista */
+    margin-bottom: 0.8rem;                  /* Spazio tra gli elementi della lista */
+    color: var(--text);                     /* Colore del testo degli elementi della lista */
+}
+
+/* ===== MEDIA QUERY RESPONSIVE ===== */
+@media screen and (max-width: 767px) {  /* Regole applicate a schermi con larghezza massima di 767px (tablet e smartphone) */
+    .info-box {
+        float: none;                         /* Rimuove il float: il box va sotto il testo */
+        width: 100%;                          /* Il box occupa tutta la larghezza disponibile */
+        margin-left: 0;                        /* Rimuove il margine sinistro */
+        margin-bottom: 1.5rem;                /* Spazio inferiore tra box e contenuto sottostante */
+    }
+}
+
+/* ===== SEZIONE AZIENDA ===== */
+#azienda strong { /* Testo evidenziato */
+    color: var(--primary-dark); /* Verde scuro */
+}
+
+/* ===== TITOLI PRINCIPALI ===== */
+h2 { /* Titolo secondario principale */
+    font-size: 2rem;                 /* Dimensione uniforme */
+    color: var(--primary-dark);      /* Verde scuro */
+    margin-bottom: 0.8rem;           /* Spazio sotto */
+}
+
+/* ===== REPORT SECTION ===== */
+.report-section { /* Contenitore report */
+    margin-top: 2rem; /* Spazio sopra */
+}
+
+.section-tag, .report-badge { /* Badge sezioni e report */
+    display: inline-block;                 /* Blocco in linea */
+    background-color: rgba(0,102,51,0.12); /* Sfondo verde chiaro trasparente */
+    color: var(--primary-dark);           /* Testo verde scuro */
+    font-weight: 700;                     /* Grassetto */
+    font-size: 0.85rem;                   /* Piccolo */
+    padding: 0.35rem 0.8rem;              /* Padding interno */
+    border-radius: 999px;                 /* Bordo pillola */
+    margin-bottom: 0.8rem;                /* Spazio sotto */
+}
+
+.section-heading p { /* Paragrafo heading */
+    color: var(--text-light);   /* Testo grigio secondario */
+    font-size: 1.05rem;         /* Leggermente maggiore */
+}
+
+/* ===== REPORT GRID ===== */
+.report-grid { /* Griglia card report */
+    display: grid;              /* Layout a griglia */
+    gap: 2rem;                  /* Spazio tra card */
+    grid-template-columns: 1fr; /* Una colonna mobile */
+}
+
+.report-card { /* Card singolo report */
+    background: var(--white);       /* Sfondo bianco */
+    border-radius: var(--radius);   /* Angoli arrotondati */
+    padding: 2rem;                  /* Spazio interno */
+    box-shadow: var(--shadow);      /* Ombra leggera */
+    border: 1px solid rgba(0,102,51,0.12); /* Bordo verde chiaro */
+    display: flex;                  /* Flex verticale */
+    flex-direction: column;         /* Contenuto verticale */
+    justify-content: space-between; /* Distribuzione verticale */
+    transition: var(--transition);  /* Transizione hover */
+}
+
+.report-card:hover { /* Hover card */
+    transform: translateY(-6px);    /* Solleva leggermente */
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12); /* Ombra più intensa */
+}
+
+.report-card h3 { /* Titolo card */
+    color: var(--primary-dark); /* Verde scuro */
+    font-size: 1.4rem;          /* Dimensione media */
+    margin-bottom: 0.8rem;      /* Spazio sotto */
+}
+
+.report-card p { /* Testo card */
+    color: var(--text-light); /* Grigio chiaro */
+    margin-bottom: 1.5rem;    /* Spazio sotto */
+}
+
+.report-card p strong { /* Testo card evidenziato */
+    color: var(--primary-dark); /* Verde scuro */
+}
+
+.report-actions { /* Contenitore pulsanti card */
+    display: flex;          /* Flex layout */
+    flex-wrap: wrap;        /* Vanno a capo se necessario */
+    gap: 0.8rem;            /* Spazio tra pulsanti */
+    margin-top: auto;       /* Spinge pulsanti in fondo */
+    justify-content: center; /* Centra pulsanti */
+}
+
+.btn-view, .btn-download { /* Pulsanti generici */
+    text-decoration: none;   /* Nessuna sottolineatura */
+    text-align: center;       /* Testo centrato */
+    font-weight: 700;         /* Grassetto */
+    padding: 0.7rem 1.1rem;   /* Spaziatura interna */
+    border-radius: var(--radius); /* Angoli arrotondati */
+    transition: var(--transition); /* Transizione hover */
+}
+
+.btn-view { /* Pulsante view */
+    color: var(--primary-dark);             /* Testo verde scuro */
+    background-color: var(--primary-light); /* Sfondo verde chiaro */
+    border: 1px solid rgba(0,102,51,0.2);   /* Bordo leggermente più scuro */
+}
+
+.btn-view:hover { /* Hover btn-view */
+    background-color: #d4ecdf; /* Sfondo leggermente più scuro */
+}
+
+.btn-download { /* Pulsante download */
+    color: var(--white);        /* Testo bianco */
+    background-color: var(--primary); /* Sfondo verde principale */
+}
+
+.btn-download:hover { /* Hover btn-download */
+    background-color: var(--accent); /* Sfondo accentuato */
+}
+
+/* ===== BOX GRID ===== */
+.box-grid { /* Griglia box */
+    display: grid;              /* Layout griglia */
+    grid-template-columns: 1fr; /* Una colonna mobile */
+    gap: 2rem;                  /* Spazio tra box */
+    margin-top: 2rem;           /* Spazio sopra griglia */
+}
+
+.box { /* Singolo box */
+    background: var(--white);   /* Sfondo bianco */
+    padding: 1.5rem;            /* Spaziatura interna */
+    border-radius: var(--radius); /* Angoli arrotondati */
+    box-shadow: var(--shadow);  /* Ombra leggera */
+}
+
+/* ===== EXCEL TABLE ===== */
+.excel-table { /* Tabella excel */
+    width: 100%;                   /* Occupa tutta larghezza */
+    border-collapse: separate;     /* Mantiene separati i bordi */
+    border-spacing: 0 1rem;        /* Spazio verticale tra righe */
+}
+
+.excel-table th { /* Intestazioni tabella */
+    text-align: center;           /* Testo centrato */
+    padding: 0.8rem;              /* Spaziatura interna */
+    font-size: 1rem;              /* Dimensione testo */
+    color: var(--primary-dark);   /* Verde scuro */
+}
+
+.excel-table td { /* Celle tabella */
+    background-color: var(--primary-light); /* Sfondo verde chiaro */
+    border-radius: var(--radius);           /* Angoli arrotondati */
+    padding: 1rem;                          /* Padding interno */
+    vertical-align: middle;                 /* Centra contenuto verticalmente */
+}
+
+.excel-table td img { /* Immagini celle */
+    max-width: 150px;         /* Larghezza massima */
+    border-radius: var(--radius); /* Angoli arrotondati */
+    object-fit: cover;        /* Immagine riempie contenitore senza deformarsi */
+}
+
+.excel-table td a.btn-download { /* Pulsante download in tabella */
+    display: inline-block;          /* Permette padding mantenendo in linea */
+    margin-top: 0.5rem;             /* Spazio sopra */
+    text-decoration: none;          /* Nessuna sottolineatura */
+    color: var(--white);            /* Testo bianco */
+    background-color: var(--primary); /* Sfondo verde principale */
+    padding: 0.6rem 1rem;           /* Padding interno */
+    border-radius: var(--radius);   /* Angoli arrotondati */
+    font-weight: 700;               /* Grassetto */
+    transition: var(--transition);  /* Transizione hover */
+}
+
+.excel-table td a.btn-download:hover { /* Hover pulsante tabella */
+    background-color: var(--accent); /* Sfondo accentuato */
+}
+
+/* ===== EXCEL TABLE RESPONSIVE ===== */
+@media screen and (max-width: 767px) { /* Mobile */
+    .excel-table, .excel-table tbody, .excel-table tr, .excel-table td, .excel-table th { 
+        display: block; /* Ogni elemento diventa blocco */
+        width: 100%;   /* Occupano tutta larghezza */
+    }
+
+    .excel-table tr { 
+        margin-bottom: 1.5rem; /* Spazio tra righe */
+    }
+
+    .excel-table th { 
+        display: none; /* Nasconde intestazioni su mobile */
+    }
+
+    .excel-table td { 
+        margin-bottom: 0.5rem; /* Piccolo distacco tra celle */
+    }
+
+    /* Centra le celle che contengono il titolo dei report */
+    .excel-table td strong {
+        display: block;       /* Trasforma in blocco */
+        text-align: center;   /* Centra il testo */
+        margin: 0 auto;       /* Centra eventuali elementi inline */
+    }
+
+    /* Centra le icone nella tabella Excel */
+    .excel-table td img {
+        display: block;   /* Blocca l'immagine per poter usare margin */
+        margin: 0 auto;   /* Centra orizzontalmente */
+    }
+
+    /* Centra i pulsanti Scarica Excel */
+    .excel-table td a.btn-download {
+        display: block;         /* Blocca il pulsante */
+        margin: 0 auto;         /* Centra il pulsante */
+        text-align: center;     /* Centra il testo interno */
+        width: auto;            /* Larghezza automatica */
+        max-width: 150px;       /* Larghezza massima desiderata */
+        padding: 0.6rem 1rem;   /* Mantieni padding */
+    }
+
+}
+
+    
+
+/* ===== SOSTENIBILITÀ ===== */
+.sustainability-activities { /* Box attività sostenibilità */
+    background-color: var(--white); /* Sfondo bianco */
+    padding: 2rem;                  /* Spaziatura interna */
+    border-radius: var(--radius);   /* Angoli arrotondati */
+    box-shadow: var(--shadow);      /* Ombra leggera */
+    margin-top: 2rem;               /* Spazio sopra */
+    margin-bottom: 2rem;            /* Spazio sotto */
+}
+
+.sustainability-activities h3 { /* Titolo box sostenibilità */
+    color: var(--primary-dark);           /* Verde scuro */
+    font-size: 1.8rem;                    /* Titolo medio-grande */
+    margin-bottom: 1rem;                  /* Spazio sotto titolo */
+    border-bottom: 2px solid var(--accent); /* Linea verde accentuata */
+    padding-bottom: 0.5rem;               /* Spazio tra testo e linea */
+}
+
+.sustainability-activities ul { /* Lista attività */
+    list-style-type: disc; /* Pallini elenco */
+    padding-left: 2rem;    /* Rientro a sinistra */
+}
+
+.sustainability-activities li { /* Singolo elemento lista */
+    font-size: 1.05rem;    /* Testo leggermente più grande */
+    line-height: 1.8;      /* Altezza riga maggiore */
+    margin-bottom: 1rem;   /* Spazio tra punti elenco */
+    color: var(--text);    /* Colore testo principale */
+}
+
+.sustainability-activities strong { /* Testo evidenziato */
+    color: var(--primary-dark); /* Verde scuro */
+}
+
+.sustainability-activities em { /* Testo in corsivo */
+    font-style: italic; /* Corsivo per concetti importanti */
+}
+
+/* ===== MEDIA QUERIES DESKTOP ===== */
+@media screen and (min-width: 768px) { /* Tablet e desktop */
+    .report-grid { 
+        grid-template-columns: repeat(2, 1fr); /* Griglia 2 colonne */
+    }
+
+    .box-grid { 
+        grid-template-columns: repeat(3, 1fr); /* Griglia 3 colonne */
+    }
+
+    header { 
+        padding: 1rem 4rem; /* Più padding laterale */
+    }
+
+    .sustainability-activities { 
+        padding: 3rem; /* Più spazio interno */
+    }
+
+    .sustainability-activities h3 { 
+        font-size: 2rem; /* Titolo più grande */
+    }
+
+    .sustainability-activities li { 
+        font-size: 1.1rem; /* Testo più leggibile */
+    }
+}
+
+/* ===== FOOTER ===== */
+footer { /* Footer pagina */
+    background-color: var(--primary-dark); /* Sfondo verde scuro */
+    color: var(--white);                    /* Testo bianco */
+    text-align: center;                     /* Testo centrato */
+    padding: 2rem;                          /* Spaziatura interna */
+}
+
+footer a { /* Link footer */
+    color: var(--accent);        /* Colore link */
+    text-decoration: none;       /* Nessuna sottolineatura */
+}
+
+footer a:hover { /* Hover link footer */
+    text-decoration: underline; /* Sottolineatura al passaggio mouse */
+}
